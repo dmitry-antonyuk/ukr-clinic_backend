@@ -12,15 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
-    },
-    "PostText": {
-      "type": "richtext"
-    },
     "slug": {
       "type": "uid",
-      "targetField": "Name"
+      "targetField": "title"
     },
     "image": {
       "type": "media",
@@ -33,14 +27,49 @@
         "audios"
       ]
     },
-    "author": {
-      "type": "string"
-    },
     "tags": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "blogs"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "richText": {
+      "type": "richtext",
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "raiting": {
+      "type": "decimal",
+      "required": true
+    },
+    "star": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rewiew": {
+      "type": "string",
+      "required": true
     }
   }
 }
